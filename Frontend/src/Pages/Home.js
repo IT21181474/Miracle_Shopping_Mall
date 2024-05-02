@@ -7,6 +7,8 @@ import stairImage from './upstair.png'; // Import the image
 import stair2Image from './upstair2.png'; // Import the image
 import groundImage from './downstair.png'; // Import the image
 import ground2Image from './ground.png'; // Import the image
+import ground3Image from './ground.jpg'; // Import the image
+
 import { Link } from 'react-router-dom'; // Import Link for navigation (optional)
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 
@@ -101,6 +103,8 @@ const Home = () => {
       setCurrentImage(groundImage); // Change to stair image on second click
     }else if (currentImage === groundImage) {
       setCurrentImage(ground2Image); // Change to stair image on second click
+    }else if (currentImage === ground2Image) {
+      setCurrentImage(ground3Image); // Change to stair image on second click
     }
      
   };
@@ -159,6 +163,18 @@ const Home = () => {
           <>
             <button style={button5Style} onClick={handleButtonClick}>
               Go First Floor!<br />
+              <i class="bi bi-arrow-down-square-fill"></i>
+            </button>
+            <button style={button4Style} onClick={handleButtonClick2}>
+              Exit<br />
+              <i className="bi bi-arrow-left-square-fill"></i>
+            </button>
+            
+          </>
+        ) : currentImage === ground2Image ? (
+          <>
+            <button style={button5Style} onClick={handleButtonClick}>
+              Go Ground Floor!<br />
               <i class="bi bi-arrow-down-square-fill"></i>
             </button>
             <button style={button4Style} onClick={handleButtonClick2}>
