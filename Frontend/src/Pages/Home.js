@@ -89,6 +89,7 @@ const Home = () => {
 
 
 
+  
   const handleButtonClick = () => {
     if (currentImage === enterImage) {
       setCurrentImage(shoppingImage); // Change to shopping image on first click
@@ -101,10 +102,14 @@ const Home = () => {
     }else if (currentImage === groundImage) {
       setCurrentImage(ground2Image); // Change to stair image on second click
     }
-     else {
-      setCurrentImage(enterImage); // Reset to enter image on any other click
-    }
+     
   };
+  const handleButtonClick2 = () => {
+    setCurrentImage(enterImage); // Reset to enter image on any other click
+  
+};
+
+
 
   return (
     <>
@@ -123,7 +128,7 @@ const Home = () => {
               Go Upstairs!<br />
               <i className="bi bi-arrow-up-square-fill"></i>
             </button>
-            <button style={button3Style} onClick={handleButtonClick}>
+            <button style={button3Style} onClick={handleButtonClick2}>
               Exit<br />
               <i className="bi bi-arrow-left-square-fill"></i>
             </button>
@@ -134,7 +139,7 @@ const Home = () => {
               Go Upstairs!<br />
               <i className="bi bi-arrow-up-square-fill"></i>
             </button>
-            <button style={button4Style} onClick={handleButtonClick}>
+            <button style={button4Style} onClick={handleButtonClick2}>
               Exit<br />
               <i className="bi bi-arrow-left-square-fill"></i>
             </button>
@@ -145,7 +150,7 @@ const Home = () => {
               Go Down!<br />
               <i class="bi bi-arrow-down-square-fill"></i>
             </button>
-            <button style={button4Style} onClick={handleButtonClick}>
+            <button style={button4Style} onClick={handleButtonClick2}>
               Exit<br />
               <i className="bi bi-arrow-left-square-fill"></i>
             </button>
@@ -156,18 +161,18 @@ const Home = () => {
               Go First Floor!<br />
               <i class="bi bi-arrow-down-square-fill"></i>
             </button>
-            <button style={button4Style} onClick={handleButtonClick}>
+            <button style={button4Style} onClick={handleButtonClick2}>
               Exit<br />
               <i className="bi bi-arrow-left-square-fill"></i>
             </button>
+            
           </>
         ) : ( // Handle stairImage or any other image
-          <button style={button4Style} onClick={handleButtonClick}>
-            {/* Add text or icon relevant to stairImage */}
-            Exit<br />
-              <i className="bi bi-arrow-left-square-fill"></i>
-
-          </button>
+        <button style={button4Style} onClick={handleButtonClick2}>
+        Exit<br />
+        <i className="bi bi-arrow-left-square-fill"></i>
+      </button>
+      
         )}
       </div>
       <Footor />
